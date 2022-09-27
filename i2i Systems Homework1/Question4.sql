@@ -1,0 +1,40 @@
+REM   Script: Question-4
+REM   Homework1-Q4
+
+describe hr.employees 
+
+
+create table emp 
+( EMPLOYEE_ID NUMBER(6,0) NOT NULL, 
+FIRST_NAME 	VARCHAR2(20), 
+LAST_NAME	VARCHAR2(25) NOT NULL, 
+EMAIL   VARCHAR2(25) NOT NULL, 
+PHONE_NUMBER VARCHAR2(20), 
+HIRE_DATE   DATE NOT NULL, 
+JOB_ID	VARCHAR2(10) NOT NULL, 
+SALARY 	NUMBER(8,2), 
+COMMISSION_PCT NUMBER(2,2), 
+MANAGER_ID	NUMBER(6,0), 
+DEPARTMENT_ID NUMBER(4,0) 
+);
+
+describe emp 
+
+
+INSERT INTO emp 
+(EMPLOYEE_ID, FIRST_NAME,LAST_NAME,EMAIL,PHONE_NUMBER,HIRE_DATE,JOB_ID,SALARY,COMMISSION_PCT,MANAGER_ID,DEPARTMENT_ID ) 
+VALUES 
+(1,'Halit','Turan','turanhalitcan@gmail.com','555.555.5555','17-JUN-03','AD_PRES',24000,'','',90 );
+
+select * from emp 
+;
+
+UPDATE emp SET PHONE_NUMBER = '222.222.2222', SALARY = 10000 where EMPLOYEE_ID=1 
+;
+
+select * from emp 
+;
+
+drop table emp 
+;
+
